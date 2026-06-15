@@ -1,0 +1,16 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorOnPrimary">#201F25</item>
+        <item name="colorPrimary">#201F25</item>
+        <item name="colorPrimaryVariant">#201F25</item>
+        <item name="colorPrimaryDark">#201F25</item>
+        <item name="colorAccent">#FFA88B</item>
+        <item name="colorControlActivated">#FFA88B</item>
+        <item name="colorControlHighlight">#352726</item>
+        <item name="colorControlNormal">#E1B382</item>
+        <item name="android:statusBarColor">#141218</item>
+        <item name="android:navigationBarColor">#141218</item>
+    </style>
+
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="md3_background">#141218</color>
+    <color name="md3_surface">#211F26</color>
+    <color name="md3_primary">#A8E5A3</color> <color name="md3_primary_variant">#146C2E</color>
+    <color name="md3_on_surface">#E6E0E9</color>
+    <color name="md3_on_surface_variant">#CAC4D0</color>
+    <color name="md3_error">#FFB4AB</color>
+    <color name="md3_success">#81C784</color>
+</resources>

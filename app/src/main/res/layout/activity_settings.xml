@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="@color/md3_background"
+     android:padding="24dp"
+     android:orientation="vertical">
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_marginBottom="32dp"
+         android:textSize="24sp"
+         android:textColor="@color/md3_primary"
+         android:text="@string/settings_title"
+         android:textStyle="bold" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:paddingVertical="8dp"
+         android:textSize="14sp"
+         android:textColor="@color/md3_on_surface"
+         android:id="@+id/switchLanguage"
+         android:text="@string/language_toggle" />
+
+    <View
+         android:layout_height="1dp"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="24dp"
+         android:background="#333333" />
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:textColor="@color/md3_on_surface_variant"
+         android:text="@string/http_port" />
+
+    <EditText
+         android:layout_height="50dp"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="16dp"
+         android:background="@drawable/card_background"
+         android:gravity="center"
+         android:textColor="@color/md3_on_surface"
+         android:inputType="number"
+         android:id="@+id/edtHttpPort" />
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:textColor="@color/md3_on_surface_variant"
+         android:text="@string/socks_port" />
+
+    <EditText
+         android:layout_height="50dp"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="32dp"
+         android:background="@drawable/card_background"
+         android:gravity="center"
+         android:textColor="@color/md3_on_surface"
+         android:inputType="number"
+         android:id="@+id/edtSocksPort" />
+
+    <Button
+         android:layout_height="50dp"
+         android:layout_width="match_parent"
+         android:background="@drawable/card_background"
+         android:textSize="16sp"
+         android:textColor="@color/md3_on_surface"
+         android:id="@+id/btnSaveSettings"
+         android:text="@string/btn_save"
+         android:textStyle="bold" />
+
+</LinearLayout>

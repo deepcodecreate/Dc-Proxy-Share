@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.proxy" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">#201F25</item>
+        <item name="colorPrimaryVariant">#201F25</item>
+        <item name="colorPrimaryDark">#201F25</item>
+        <item name="colorOnPrimary">#E1B382</item>
+        <item name="colorControlActivated">#ffa88b</item>
+        <item name="colorSecondary">#ffa88b</item>
+        <item name="colorSecondaryVariant">#ffa88b</item>
+        <item name="colorOnSecondary">#E1B382</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">#141218</item> </style>
+</resources>

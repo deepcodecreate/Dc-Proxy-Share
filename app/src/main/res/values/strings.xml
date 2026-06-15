@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DC Proxy Share</string>
+    <string name="system_status">System Status</string>
+    <string name="proxy_service">Proxy Service:</string>
+    <string name="vpn_status">VPN Status:</string>
+    <string name="hotspot_status">Hotspot Status:</string>
+    <string name="ip_address">IP Address:</string>
+    <string name="status_active">Active and Running</string>
+    <string name="status_inactive">Inactive</string>
+    <string name="status_connected">Connected</string>
+    <string name="status_disconnected">Disconnected</string>
+    <string name="status_on">On</string>
+    <string name="status_off">Off</string>
+    <string name="btn_start_proxy">Start Proxy</string>
+    <string name="btn_stop_proxy">Stop Proxy</string>
+    <string name="btn_settings">Settings</string>
+    <string name="settings_title">Port Settings</string>
+    <string name="http_port">HTTP Proxy Port:</string>
+    <string name="socks_port">SOCKS5 Proxy Port:</string>
+    <string name="btn_save">Save Changes</string>
+    <string name="trafficpr">Used Traffic</string>
+    <string name="httport">http port:</string>
+    <string name="sokport">socks5 port:</string>
+    <string name="dwbotton">download</string>
+    <string name="upbotton">upload</string>
+    <string name="language_toggle">(Persian/English)</string>
+</resources>

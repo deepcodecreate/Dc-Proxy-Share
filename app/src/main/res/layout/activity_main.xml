@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="@color/md3_background"
+     android:padding="24dp"
+     android:orientation="vertical">
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_marginBottom="32dp"
+         android:textSize="28sp"
+         android:textColor="@color/md3_primary"
+         android:layout_marginTop="8dp"
+         android:layout_gravity="center_horizontal"
+         android:text="@string/app_name"
+         android:textStyle="bold" />
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="24dp"
+         android:background="@drawable/card_background"
+         android:elevation="4dp"
+         android:padding="20dp"
+         android:orientation="vertical">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginBottom="16dp"
+             android:textSize="20sp"
+             android:textColor="@color/md3_on_surface"
+             android:text="@string/system_status"
+             android:textStyle="bold" />
+
+        <RelativeLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="12dp">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:textColor="@color/md3_on_surface_variant"
+                 android:text="@string/proxy_service" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:layout_alignParentEnd="true"
+                 android:id="@+id/txtProxyStatus"
+                 android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="12dp">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:textColor="@color/md3_on_surface_variant"
+                 android:text="@string/vpn_status" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:layout_alignParentEnd="true"
+                 android:id="@+id/txtVpnStatus"
+                 android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="16dp">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:textColor="@color/md3_on_surface_variant"
+                 android:text="@string/hotspot_status" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:layout_alignParentEnd="true"
+                 android:id="@+id/txtHotspotStatus"
+                 android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <View
+             android:layout_height="1dp"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="16dp"
+             android:background="#333333" />
+
+        <RelativeLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="16dp">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:textColor="@color/md3_on_surface_variant"
+                 android:text="@string/ip_address" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:layout_alignParentEnd="true"
+                 android:textSize="16sp"
+                 android:textColor="@color/md3_primary"
+                 android:id="@+id/txtIpAddress"
+                 android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="16dp">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:textColor="@color/md3_on_surface_variant"
+                 android:text="@string/httport"/>
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:layout_alignParentEnd="true"
+                 android:textSize="16sp"
+                 android:textColor="@color/md3_primary"
+                 android:id="@+id/txtHttpPort"
+                 android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:textColor="@color/md3_on_surface_variant"
+                 android:text="@string/sokport"/>
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:layout_alignParentEnd="true"
+                 android:textSize="16sp"
+                 android:textColor="@color/md3_primary"
+                 android:id="@+id/txtSocksPort"
+                 android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+         android:layout_height="170dp"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="16dp"
+         android:gravity="center"
+         android:background="@drawable/card_background"
+         android:elevation="4dp"
+         android:padding="16dp"
+         android:orientation="vertical">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginBottom="16dp"
+             android:textSize="18sp"
+             android:textColor="@color/md3_on_surface"
+             android:text="@string/trafficpr"
+             android:textStyle="bold" />
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:orientation="horizontal">
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:gravity="center"
+                 android:orientation="vertical"
+                 android:layout_weight="1">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textColor="@color/md3_on_surface_variant"
+                     android:text="@string/dwbotton" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textSize="18sp"
+                     android:textColor="@color/md3_success"
+                     android:id="@+id/txtDownload"
+                     android:textStyle="bold"
+                     android:text="0 B" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:gravity="center"
+                 android:orientation="vertical"
+                 android:layout_weight="1">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textColor="@color/md3_on_surface_variant"
+                     android:text="@string/upbotton" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textSize="18sp"
+                     android:textColor="@color/md3_error"
+                     android:id="@+id/txtUpload"
+                     android:textStyle="bold"
+                     android:text="0 B" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+         android:layout_height="55dp"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="12dp"
+         android:background="@drawable/card_background"
+         android:textSize="18sp"
+         android:textColor="@color/md3_on_surface"
+         android:id="@+id/btnStartStop"
+         android:textStyle="bold" />
+
+    <Button
+         android:layout_height="55dp"
+         android:layout_width="match_parent"
+         android:background="@drawable/card_background"
+         android:textSize="16sp"
+         android:textColor="@color/md3_on_surface"
+         android:id="@+id/btnSettings"
+         android:text="@string/btn_settings" />
+
+</LinearLayout>

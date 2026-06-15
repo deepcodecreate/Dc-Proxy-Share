@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DC Proxy Share</string>
+    <string name="system_status">وضعیت سیستم</string>
+    <string name="proxy_service">سرویس پروکسی:</string>
+    <string name="vpn_status">وضعیت وی‌پی‌ان گوشی:</string>
+    <string name="hotspot_status">وضعیت هات اسپات:</string>
+    <string name="ip_address">ادرس IP:</string>
+    <string name="status_active">فعال و در حال کار</string>
+    <string name="status_inactive">غیرفعال</string>
+    <string name="status_connected">متصل</string>
+    <string name="status_disconnected">قطع</string>
+    <string name="status_on">روشن</string>
+    <string name="status_off">خاموش</string>
+    <string name="btn_start_proxy">روشن کردن پروکسی</string>
+    <string name="btn_stop_proxy">خاموش کردن پروکسی</string>
+    <string name="btn_settings">تنظیمات</string>
+    <string name="settings_title">تنظیمات</string>
+    <string name="http_port">پورت HTTP Proxy:</string>
+    <string name="socks_port">پورت SOCKS5 Proxy:</string>
+    <string name="btn_save">ذخیره تغییرات</string>
+    <string name="trafficpr">ترافیک مصرفی</string>
+    <string name="httport">پورت http:</string>
+    <string name="sokport">پورت socks5:</string>
+    <string name="dwbotton">دانلود</string>
+    <string name="upbotton">اپلود</string>
+    <string name="language_toggle">(Persian/English)</string>
+</resources>
