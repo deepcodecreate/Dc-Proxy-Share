@@ -1,6 +1,6 @@
 # 🚀 ShareProxy
 
-An advanced Android network utility that allows you to easily share your phone's active VPN or TUN connection with your laptop, PC, or other devices over a local Wi-Fi Hotspot via a built-in HTTP/HTTPS proxy server.
+An advanced Android network utility that allows you to easily share your phone's active VPN or TUN connection with your laptop, PC, or other devices over a local Wi-Fi Hotspot via a built-in HTTP/SOCKS proxy server.
 
 ![Android Target](https://img.shields.io/badge/Android-SDK%2034-brightgreen?style=flat-square&logo=android)
 ![Feature](https://img.shields.io/badge/VPN-Tethering%20%2F%20Sharing-blue?style=flat-square)
@@ -13,11 +13,8 @@ An advanced Android network utility that allows you to easily share your phone's
 - **🌐 VPN-over-Hotspot Sharing**
   Bypass Android's native restriction that blocks VPN traffic when turning on a Hotspot. Share your active VPN/TUN connection with any laptop or PC seamlessly.
 
-- **🔒 Built-in HTTP/HTTPS Proxy Server**
+- **🔒 Built-in HTTP/SOCKS Proxy Server**
   Spuns up a local proxy server right on your Android device, routing client traffic through the secure mobile VPN interface.
-
-- **📋 Smart Clipboard Configuration**
-  Instantly import, parse, and apply proxy server configurations or credentials from your system clipboard with a single click.
 
 - **⚡ Modern & Optimized**
   Fully compatible with Android 14 (API Level 34), ensuring high-speed data forwarding, low battery consumption, and stable background services.
@@ -42,9 +39,6 @@ An advanced Android network utility that allows you to easily share your phone's
 To compile the project manually:
 ```bash
 ./gradlew :app:assembleDebug
-
-- **📋 Smart Clipboard Import**
-  Eliminates tedious manual input. Integrates an intelligent parsing routine that instantly detects, decodes, and applies proxy server nodes straight from the clipboard string.
 
 - **⚡ Modern Architecture**
   Built on modern Android development paradigms targeting API Level 34 (Android 14) using stable Gradle workflows (`:app:assembleDebug`).
