@@ -55,4 +55,4 @@ To compile the project manually:
 ### Quick Build
 To compile the debug artifact locally from your terminal, execute:
 ```bash
-./gradlew :app:assembleDebug
+./gradlew :app:assembleDebug```
