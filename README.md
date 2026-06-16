@@ -37,9 +37,6 @@ An advanced Android network utility that allows you to easily share your phone's
 - **Build Toolchain:** Gradle 8.0.0+ / AndroidIDE
 
 To compile the project manually:
-```bash
-./gradlew :app:assembleDebug
-
 - **⚡ Modern Architecture**
   Built on modern Android development paradigms targeting API Level 34 (Android 14) using stable Gradle workflows (`:app:assembleDebug`).
 
