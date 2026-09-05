@@ -22,10 +22,10 @@ android {
     
     signingConfigs {
         release {
-            storeFile file("deepcode.jks")
-            storePassword "deep121212A"
-            keyAlias "deepiran"
-            keyPassword "deep121212A"
+            storeFile file("releese.jks")
+            storePassword "1234"
+            keyAlias "1234"
+            keyPassword "1234"
         }
     }
     
