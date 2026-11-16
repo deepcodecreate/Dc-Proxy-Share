@@ -1,55 +1,54 @@
-# 🚀 ShareProxy
+# DC Proxy Share
 
-An advanced Android network utility that allows you to easily share your phone's active VPN or TUN connection with your laptop, PC, or other devices over a local Wi-Fi Hotspot via a built-in HTTP/SOCKS proxy server.
+Share your phone's VPN connection with other devices over the hotspot. The app runs a local HTTP and SOCKS5 proxy and includes a full network monitor.
 
-![Android Target](https://img.shields.io/badge/Android-SDK%2034-brightgreen?style=flat-square&logo=android)
-![Feature](https://img.shields.io/badge/VPN-Tethering%20%2F%20Sharing-blue?style=flat-square)
-![Build](https://img.shields.io/badge/AGP-8.0.0-orange?style=flat-square)
+## Features
 
----
+- HTTP proxy and SOCKS5 proxy with a foreground service
+- Home screen with live shared traffic and the devices using the proxy
+- Network monitor
+  - Overview: internet status, DNS time, public IP, active network, phone and proxy traffic
+  - Wi-Fi: signal, link speed, band, channel, security, IP configuration, hotspot
+  - VPN: interface, protocol, addresses, routes, exit IP and country
+  - Devices: local network scan and proxy clients
+  - Ping: live ping, jitter, loss, history chart, multi-target comparison
+  - Logs: filterable event log with share and clear
+- 8 themes in light and dark, wallpaper colors, pure black, icon shapes, font size, motion levels
+- Persian and English
 
-## ✨ Key Features
+## Usage
 
-- **🌐 VPN-over-Hotspot Sharing**
-  Bypass Android's native restriction that blocks VPN traffic when turning on a Hotspot. Share your active VPN/TUN connection with any laptop or PC seamlessly.
+1. Turn on your VPN and the phone hotspot.
+2. Open the app and tap Start proxy.
+3. On the other device, join the hotspot and set the proxy to the address shown on the Home screen.
 
-- **🔒 Built-in HTTP/SOCKS Proxy Server**
-  Spuns up a local proxy server right on your Android device, routing client traffic through the secure mobile VPN interface.
+## Build
 
-- **⚡ Modern & Optimized**
-  Fully compatible with Android 14 (API Level 34), ensuring high-speed data forwarding, low battery consumption, and stable background services.
+The app has no native code, so one APK runs on arm64-v8a, armeabi-v7a, x86 and x86_64. The build also writes a universal APK and one APK per ABI.
 
----
+Requirements: JDK 17 and Gradle 8.0 or newer.
 
-## 💻 How It Works (Laptop Connection)
+```
+gradle assembleDebug
+gradle assembleRelease
+```
 
-1. **Turn on Hotspot:** Enable Portable Hotspot on your Android phone and connect your laptop to it.
-2. **Start ShareProxy:** Open the app on your phone, ensure your VPN is connected, and click **Start Server**. It will show your phone's local IP (e.g., `192.168.43.1`) and a Port (e.g., `8080`).
-3. **Configure Laptop:** Go to your Laptop's Network Settings -> Proxy Settings, enable "Use a proxy server", and enter the IP and Port provided by the app.
-4. **Enjoy Open Internet:** Your laptop's traffic is now securely tunneled through your phone's VPN!
+APKs are written to `app/build/outputs/apk`.
 
----
+### Signed release
 
-## 🛠️ Architecture & Requirements
+The release and debug APKs are signed with `app/proxyshare.jks`. If the file is missing, Gradle generates it automatically before signing.
 
-- **Minimum SDK:** 28 (Android 9.0)
-- **Target SDK:** 34 (Android 14)
-- **Build Toolchain:** Gradle 8.0.0+ / AndroidIDE
+## GitHub Actions
 
-To compile the project manually:
-- **⚡ Modern Architecture**
-  Built on modern Android development paradigms targeting API Level 34 (Android 14) using stable Gradle workflows (`:app:assembleDebug`).
+The workflow in `.github/workflows/build.yml` builds the debug and release APKs on every push and pull request and uploads them as artifacts. Pushing a tag such as `v1.0` also publishes them as a GitHub release.
 
----
+## Notes
 
-## 🛠️ Architecture & Setup
+- Android hides MAC addresses from apps on recent versions, so the device scan can show only IP addresses.
+- The Wi-Fi name needs the location permission.
+- The web check and public IP lookup use gstatic.com and ipwho.is and can be turned off in Settings.
 
-### Requirements
-- **Minimum Android SDK:** 28+
-- **Target Android SDK:** 34 (Android 14)
-- **IDE:** AndroidIDE or Android Studio (Gradle 8.0.0+)
+## License
 
-### Quick Build
-To compile the debug artifact locally from your terminal, execute:
-```bash
-./gradlew :app:assembleDebug
+MIT License. Copyright (c) 2026 [@deepcodecreate](https://github.com/deepcodecreate). See [LICENSE](LICENSE).

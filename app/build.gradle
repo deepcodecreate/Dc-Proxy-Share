@@ -1,35 +1,68 @@
-
 plugins {
     id 'com.android.application'
-    
+}
+
+def releaseKeystore = file("proxyshare.jks")
+
+tasks.register("generateKeystore", Exec) {
+    onlyIf { !releaseKeystore.exists() }
+    commandLine(
+        new File(System.getProperty("java.home"), "bin/keytool").absolutePath,
+        "-genkeypair",
+        "-keystore", releaseKeystore.absolutePath,
+        "-storetype", "PKCS12",
+        "-storepass", "proxyshare",
+        "-keypass", "proxyshare",
+        "-alias", "proxyshare",
+        "-keyalg", "RSA",
+        "-keysize", "4096",
+        "-validity", "36500",
+        "-dname", "CN=ProxyShare, O=ProxyShare, C=US"
+    )
+}
+
+tasks.matching { it.name.startsWith("validateSigning") || it.name.startsWith("package") }.configureEach {
+    dependsOn("generateKeystore")
 }
 
 android {
     namespace 'proxy.share.dc'
     compileSdk 34
-    
+
     defaultConfig {
         applicationId "proxy.share.dc"
         minSdk 28
         targetSdk 34
-        versionCode 1
-        versionName "1.0"
-        
-        vectorDrawables { 
+        versionCode 2
+        versionName "1.5"
+
+        vectorDrawables {
             useSupportLibrary true
         }
     }
-    
+
     signingConfigs {
         release {
-            storeFile file("releese.jks")
-            storePassword "1234"
-            keyAlias "1234"
-            keyPassword "1234"
+            storeFile releaseKeystore
+            storePassword "proxyshare"
+            keyAlias "proxyshare"
+            keyPassword "proxyshare"
         }
     }
-    
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+            universalApk true
+        }
+    }
+
     buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
         release {
             signingConfig signingConfigs.release
             minifyEnabled false
@@ -45,16 +78,13 @@ android {
 
     buildFeatures {
         viewBinding true
-        
     }
-    
 }
 
 dependencies {
-
-
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.activity:activity:1.8.0")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
 }

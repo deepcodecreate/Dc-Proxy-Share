@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="page_padding_h">32dp</dimen>
+    <dimen name="card_padding">22dp</dimen>
+    <dimen name="chart_height">180dp</dimen>
+    <dimen name="nav_margin_h">96dp</dimen>
+    <dimen name="content_max_width">640dp</dimen>
+    <dimen name="section_gap">18dp</dimen>
+    <dimen name="hero_title_size">28sp</dimen>
+    <dimen name="speed_value_size">32sp</dimen>
+</resources>
