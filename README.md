@@ -30,6 +30,9 @@
 
 <br>
 
+
+[![Get it in Lumen Store](https://deepcodecreate.github.io/lumenstore/badges/lumen-store.svg)](https://deepcodecreate.github.io/lumenstore/app.html?id=proxy.share.dc)
+
 ## Features
 
 | | |
